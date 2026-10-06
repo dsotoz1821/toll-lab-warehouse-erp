@@ -11,6 +11,21 @@ Este repositorio **no contiene código fuente**. Documenta la ingeniería: cuál
 
 ---
 
+## Impacto
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/impacto-es-dark.svg">
+  <img alt="Impacto: 22 plazas, +50 mil equipos, +150 usuarios activos, 6 formatos en papel sustituidos; cierre mensual de 7 días al mismo día" src="assets/impacto-es-light.svg">
+</picture>
+
+La cifra a la que apuntaría primero es la **caída del 80% en observaciones de auditoría**, porque es la única de aquí que midió alguien ajeno al proyecto. Todo lo demás en esta página lo reporto yo; esa vino de vuelta en una auditoría. Y es además la que explica a las otras: las observaciones bajan cuando cada pieza tiene identidad, ubicación e historial que cuadra, porque sencillamente hay menos qué observar.
+
+La segunda en la que vale la pena detenerse es el cierre mensual. Antes tomaba **siete días** de juntar hojas de cálculo, conciliarlas a mano y perseguir a las plazas que no habían mandado la suya. Hoy cierra **el mismo día, y los números cuadran**, porque la conciliación corre todas las noches contra los datos de origen en vez de contra lo que cada plaza capturó, y porque un mes cerrado queda congelado al nivel de la base de datos y no por convención. El [caso 1](docs/case-study-01-data-integrity.es.md) es la historia de haber acertado en esa última parte, que costó dos intentos.
+
+La tercera es menos visible y pesa igual en el día a día: **localizar una pieza por su número de serie** tomaba horas, a veces días de llamadas entre plazas. Hoy toma segundos, porque cada equipo tiene identidad propia y su historial completo: de dónde vino, en qué carril está y cada documento que lo tocó alguna vez.
+
+---
+
 ## Por qué existe este repositorio
 
 Casi todos los repositorios de portafolio muestran código. El código es lo fácil de mostrar y lo difícil de juzgar fuera de contexto: viendo un archivo no se puede saber si la decisión difícil se tomó bien.
@@ -36,21 +51,6 @@ Un laboratorio de electrónica de peaje mantiene vivo el equipo de campo: lector
 El registro de todo eso vivía en formatos impresos y en una hoja de cálculo por responsable. Cada plaza llevaba la suya. Nada ligaba una pieza física con una fila, así que un número de serie no se podía seguir del almacén al carril donde terminó instalado. La consolidación de fin de mes era manual y dependía de que llegaran todos los archivos. Un número mal capturado salía a flote meses después, si acaso, y la corrección sobrescribía el original: no quedaba forma de saber qué había cambiado ni quién lo cambió.
 
 Nada de eso es raro. Así se ve una operación antes de que alguien le construya un sistema.
-
----
-
-## Impacto
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/impacto-es-dark.svg">
-  <img alt="Impacto: 22 plazas, +50 mil equipos, +150 usuarios activos, 6 formatos en papel sustituidos; cierre mensual de 7 días al mismo día" src="assets/impacto-es-light.svg">
-</picture>
-
-La cifra a la que apuntaría primero es la **caída del 80% en observaciones de auditoría**, porque es la única de aquí que midió alguien ajeno al proyecto. Todo lo demás en esta página lo reporto yo; esa vino de vuelta en una auditoría. Y es además la que explica a las otras: las observaciones bajan cuando cada pieza tiene identidad, ubicación e historial que cuadra, porque sencillamente hay menos qué observar.
-
-La segunda en la que vale la pena detenerse es el cierre mensual. Antes tomaba **siete días** de juntar hojas de cálculo, conciliarlas a mano y perseguir a las plazas que no habían mandado la suya. Hoy cierra **el mismo día, y los números cuadran**, porque la conciliación corre todas las noches contra los datos de origen en vez de contra lo que cada plaza capturó, y porque un mes cerrado queda congelado al nivel de la base de datos y no por convención. El [caso 1](docs/case-study-01-data-integrity.es.md) es la historia de haber acertado en esa última parte, que costó dos intentos.
-
-La tercera es menos visible y pesa igual en el día a día: **localizar una pieza por su número de serie** tomaba horas, a veces días de llamadas entre plazas. Hoy toma segundos, porque cada equipo tiene identidad propia y su historial completo: de dónde vino, en qué carril está y cada documento que lo tocó alguna vez.
 
 ---
 

@@ -11,6 +11,21 @@ This repository contains **no source code**. It documents the engineering: what 
 
 ---
 
+## Impact
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/impacto-en-dark.svg">
+  <img alt="Impact: 22 sites, 50k+ units, 150+ active users, 6 paper forms replaced; monthly close from 7 days to same day" src="assets/impacto-en-light.svg">
+</picture>
+
+The number I would point a reader at first is the **80% drop in audit findings** — because it is the only one here that someone outside the project measured. Everything else on this page I report myself; that one came back from an audit. It is also the number that explains the others: findings fall when every unit has an identity, a location and a history that reconciles, so there is simply less to find.
+
+The second one worth dwelling on is the monthly close. It used to take **seven days** of collecting spreadsheets, reconciling them by hand and chasing the sites that had not sent theirs. It now closes **the same day, and the figures reconcile** — because the reconciliation runs nightly against source data instead of against whatever each site typed, and because a closed month is frozen at the database level rather than by convention. [Case study 1](docs/case-study-01-data-integrity.md) is the story of getting that last part right, which took two attempts.
+
+The third is less visible and matters as much day to day: **finding a specific unit by its serial number** used to take hours, sometimes days of phone calls between plazas. It takes seconds now, because every unit carries its own identity and its full history — where it came from, which lane it sits in, every document that ever touched it.
+
+---
+
 ## Why this repository exists
 
 Most portfolio repositories show code. Code is the easy part to show and the hard part to judge out of context — you cannot tell, from a file, whether the hard decision was made well.
@@ -36,21 +51,6 @@ A toll-road electronics laboratory keeps the field hardware running: RFID reader
 The record of all that lived in printed forms and in one spreadsheet per person responsible. Each site kept its own. Nothing linked a physical unit to a row, so a serial number could not be followed from the warehouse to the lane it ended up in. Month-end consolidation was manual and depended on every file arriving. A number typed wrong surfaced months later, if ever — and the correction overwrote the original, so there was no way to tell what had changed or who changed it.
 
 None of that is unusual. It is what an operation looks like before anyone builds it a system.
-
----
-
-## Impact
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/impacto-en-dark.svg">
-  <img alt="Impact: 22 sites, 50k+ units, 150+ active users, 6 paper forms replaced; monthly close from 7 days to same day" src="assets/impacto-en-light.svg">
-</picture>
-
-The number I would point a reader at first is the **80% drop in audit findings** — because it is the only one here that someone outside the project measured. Everything else on this page I report myself; that one came back from an audit. It is also the number that explains the others: findings fall when every unit has an identity, a location and a history that reconciles, so there is simply less to find.
-
-The second one worth dwelling on is the monthly close. It used to take **seven days** of collecting spreadsheets, reconciling them by hand and chasing the sites that had not sent theirs. It now closes **the same day, and the figures reconcile** — because the reconciliation runs nightly against source data instead of against whatever each site typed, and because a closed month is frozen at the database level rather than by convention. [Case study 1](docs/case-study-01-data-integrity.md) is the story of getting that last part right, which took two attempts.
-
-The third is less visible and matters as much day to day: **finding a specific unit by its serial number** used to take hours, sometimes days of phone calls between plazas. It takes seconds now, because every unit carries its own identity and its full history — where it came from, which lane it sits in, every document that ever touched it.
 
 ---
 
